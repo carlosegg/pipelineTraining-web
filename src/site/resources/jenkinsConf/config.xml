@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors/>
+  <version>1.489</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:carlosg</permission>
+    <permission>hudson.model.Hudson.Administer:contint</permission>
+    <permission>hudson.model.Hudson.Administer:develenv</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Item.Build:contint</permission>
+    <permission>hudson.model.Item.ExtendedRead:anonymous</permission>
+    <permission>hudson.model.Item.ExtendedRead:contint</permission>
+    <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:contint</permission>
+    <permission>hudson.model.Item.Workspace:anonymous</permission>
+    <permission>hudson.model.Item.Workspace:contint</permission>
+    <permission>hudson.model.Run.Update:contint</permission>
+    <permission>hudson.model.View.Read:anonymous</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
+  <jdks>
+    <jdk>
+      <name>JAVA6</name>
+      <home>/usr/lib/jvm/java-7-oracle</home>
+      <properties/>
+    </jdk>
+  </jdks>
+  <viewsTabBar class="ws.albors.CountJobsViewsTabBar" plugin="countjobs-viewstabbar@1.0.0"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <slaves/>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>develenv samples</name>
+      <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;viewJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/viewJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+&lt;h3&gt;Todos los ejemplos que vienen con la instalación básica de develenv, más los ejemplos que vienen con la instalación de plugins de develenv (http://develenv.softwaresano.com/plugins.html)&lt;/h3&gt;</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>backupDevelenv</string>
+        <string>CSample</string>
+        <string>CppSample</string>
+        <string>develenv</string>
+        <string>PHPSample</string>
+        <string>DjangoExample</string>
+        <string>PythonExample</string>
+        <string>flexSample</string>
+        <string>GroovySample</string>
+        <string>j2meSample</string>
+        <string>JMeterExample</string>
+        <string>JSSample</string>
+        <string>SeleniumGridExample</string>
+        <string>standalone-archetype</string>
+        <string>test-calculator</string>
+        <string>test-develenv</string>
+        <string>web-calculator</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets>
+        <hudson.plugins.view.dashboard.stats.StatBuilds>
+          <id>dashboard_portlet_1</id>
+          <name>Build statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatBuilds>
+        <hudson.plugins.dry.dashboard.WarningsTablePortlet plugin="dry@2.33">
+          <id>dashboard_portlet_2</id>
+          <name>Duplicate code per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.dry.dashboard.WarningsTablePortlet>
+        <hudson.plugins.pmd.dashboard.WarningsTablePortlet plugin="pmd@3.33">
+          <id>dashboard_portlet_3</id>
+          <name>PMD warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.pmd.dashboard.WarningsTablePortlet>
+      </leftPortlets>
+      <rightPortlets>
+        <hudson.plugins.view.dashboard.test.TestStatisticsChart>
+          <id>dashboard_portlet_4</id>
+          <name>Test Statistics Chart</name>
+        </hudson.plugins.view.dashboard.test.TestStatisticsChart>
+        <hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+          <id>dashboard_portlet_5</id>
+          <name>Test Statistics Grid</name>
+          <useBackgroundColors>false</useBackgroundColors>
+        </hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.7.1">
+          <id>dashboard_portlet_6</id>
+          <name>Code Coverages</name>
+        </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+        <hudson.plugins.release.dashboard.RecentReleasesPortlet plugin="release@2.3">
+          <id>dashboard_portlet_7</id>
+          <name>Recent Releases</name>
+        </hudson.plugins.release.dashboard.RecentReleasesPortlet>
+      </rightPortlets>
+      <topPortlets/>
+      <bottomPortlets>
+        <hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet plugin="analysis-collector@1.34">
+          <id>dashboard_portlet_8</id>
+          <name>Warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+          <useImages>false</useImages>
+          <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
+          <isDryDeactivated>false</isDryDeactivated>
+          <isFindBugsDeactivated>false</isFindBugsDeactivated>
+          <isPmdDeactivated>false</isPmdDeactivated>
+          <isOpenTasksDeactivated>false</isOpenTasksDeactivated>
+          <isWarningsDeactivated>false</isWarningsDeactivated>
+        </hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet>
+      </bottomPortlets>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>QA</name>
+      <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;viewJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/viewJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/builtBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+&lt;h3&gt;Son todas aquellas tareas que deban pasar una revisión de QA(Quality Assurance). Son las tareas que generan los componentes que vayan a ser instalados en producción&lt;/h3&gt;</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>.*-smokeTest$|.*-package$</includeRegex>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets>
+        <hudson.plugins.view.dashboard.stats.StatBuilds>
+          <id>dashboard_portlet_33</id>
+          <name>Build statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatBuilds>
+        <hudson.plugins.dry.dashboard.WarningsTablePortlet plugin="dry@2.33">
+          <id>dashboard_portlet_34</id>
+          <name>Duplicate code per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.dry.dashboard.WarningsTablePortlet>
+        <hudson.plugins.pmd.dashboard.WarningsTablePortlet plugin="pmd@3.33">
+          <id>dashboard_portlet_35</id>
+          <name>PMD warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.pmd.dashboard.WarningsTablePortlet>
+      </leftPortlets>
+      <rightPortlets>
+        <hudson.plugins.view.dashboard.test.TestStatisticsChart>
+          <id>dashboard_portlet_36</id>
+          <name>Test Statistics Chart</name>
+        </hudson.plugins.view.dashboard.test.TestStatisticsChart>
+        <hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+          <id>dashboard_portlet_37</id>
+          <name>Test Statistics Grid</name>
+          <useBackgroundColors>false</useBackgroundColors>
+        </hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.7.1">
+          <id>dashboard_portlet_38</id>
+          <name>Code Coverages</name>
+        </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+        <hudson.plugins.release.dashboard.RecentReleasesPortlet plugin="release@2.3">
+          <id>dashboard_portlet_39</id>
+          <name>Recent Releases</name>
+        </hudson.plugins.release.dashboard.RecentReleasesPortlet>
+      </rightPortlets>
+      <topPortlets/>
+      <bottomPortlets>
+        <hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet plugin="analysis-collector@1.34">
+          <id>dashboard_portlet_40</id>
+          <name>Warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+          <useImages>false</useImages>
+          <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
+          <isDryDeactivated>false</isDryDeactivated>
+          <isFindBugsDeactivated>false</isFindBugsDeactivated>
+          <isPmdDeactivated>false</isPmdDeactivated>
+          <isOpenTasksDeactivated>false</isOpenTasksDeactivated>
+          <isWarningsDeactivated>false</isWarningsDeactivated>
+        </hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet>
+      </bottomPortlets>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;viewJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/viewJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+&lt;h3&gt;Todos los jobs almacenados en Jenkins&lt;/h3&gt;</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>(.*).*</includeRegex>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets/>
+      <rightPortlets/>
+      <topPortlets/>
+      <bottomPortlets/>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>eXperimental</name>
+      <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;viewJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/viewJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+&lt;h3&gt;Son aquellas tareas que no generan un artefacto que deba ser instalado en producción y que por lo tanto no tengan que pasar una revisión en cuanto a la calidad. Por ejemplo, son tareas que sirven para experimentar la integración contínua con alguna tecnología nueva&lt;/h3&gt;&#xd;
+</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../hudson.plugins.view.dashboard.Dashboard[2]/jobNames/comparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets/>
+      <rightPortlets/>
+      <topPortlets/>
+      <bottomPortlets/>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>Admin pipelines</name>
+      <description>Admin deployment pipelines</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>pipeline-ADMIN-.*</includeRegex>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets/>
+      <rightPortlets/>
+      <topPortlets/>
+      <bottomPortlets/>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>Failed</name>
+      <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;viewJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/viewJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/jenkinsViewBuiltBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+&lt;h3&gt;Todos los jobs que est&amp;aacute;n fallando actualmente&lt;/h3&gt;</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>falla</string>
+      </jobNames>
+      <jobFilters>
+        <hudson.views.JobStatusFilter plugin="view-job-filters@1.22">
+          <includeExcludeTypeString>includeMatched</includeExcludeTypeString>
+          <unstable>false</unstable>
+          <failed>true</failed>
+          <aborted>false</aborted>
+          <disabled>false</disabled>
+          <stable>false</stable>
+        </hudson.views.JobStatusFilter>
+      </jobFilters>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets/>
+      <rightPortlets/>
+      <topPortlets/>
+      <bottomPortlets/>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.3.3">
+      <owner class="hudson" reference="../../.."/>
+      <name>pipelineTraining web pipeline</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties/>
+      <selectedJob>pipelineTraining-web-01-build</selectedJob>
+      <noOfDisplayedBuilds>10</noOfDisplayedBuilds>
+      <buildViewTitle>pipelineTraining web Pipeline</buildViewTitle>
+      <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
+      <alwaysAllowManualTrigger>false</alwaysAllowManualTrigger>
+      <showPipelineParameters>false</showPipelineParameters>
+      <refreshFrequency>0</refreshFrequency>
+      <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
+      <displayProgressBar>false</displayProgressBar>
+    </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.4">
+      <owner class="hudson" reference="../../.."/>
+      <name>pipelineTraining</name>
+      <description>All jobs in pipelineTraining pipeline</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>borrame</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.13"/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>true</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <jenkins.plugins.extracolumns.ConfigureProjectColumn plugin="extra-columns@1.6"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <jenkins.plugins.extracolumns.TestResultColumn plugin="extra-columns@1.6">
+          <testResultFormat>0</testResultFormat>
+        </jenkins.plugins.extracolumns.TestResultColumn>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>pipelineTraining-.*</includeRegex>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets>
+        <hudson.plugins.view.dashboard.stats.StatBuilds>
+          <id>dashboard_portlet_9</id>
+          <name>Build statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatBuilds>
+        <hudson.plugins.dry.dashboard.WarningsTablePortlet plugin="dry@2.33">
+          <id>dashboard_portlet_10</id>
+          <name>Duplicate code per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.dry.dashboard.WarningsTablePortlet>
+        <hudson.plugins.pmd.dashboard.WarningsTablePortlet plugin="pmd@3.33">
+          <id>dashboard_portlet_11</id>
+          <name>PMD warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+        </hudson.plugins.pmd.dashboard.WarningsTablePortlet>
+      </leftPortlets>
+      <rightPortlets>
+        <hudson.plugins.view.dashboard.test.TestStatisticsChart>
+          <id>dashboard_portlet_12</id>
+          <name>Test Statistics Chart</name>
+        </hudson.plugins.view.dashboard.test.TestStatisticsChart>
+        <hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+          <id>dashboard_portlet_13</id>
+          <name>Test Statistics Grid</name>
+          <useBackgroundColors>false</useBackgroundColors>
+        </hudson.plugins.view.dashboard.test.TestStatisticsPortlet>
+        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.7.1">
+          <id>dashboard_portlet_14</id>
+          <name>Code Coverages</name>
+        </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+        <hudson.plugins.release.dashboard.RecentReleasesPortlet plugin="release@2.3">
+          <id>dashboard_portlet_15</id>
+          <name>Recent Releases</name>
+        </hudson.plugins.release.dashboard.RecentReleasesPortlet>
+      </rightPortlets>
+      <topPortlets/>
+      <bottomPortlets>
+        <hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet plugin="analysis-collector@1.34">
+          <id>dashboard_portlet_16</id>
+          <name>Warnings per project</name>
+          <canHideZeroWarningsProjects>false</canHideZeroWarningsProjects>
+          <useImages>false</useImages>
+          <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
+          <isDryDeactivated>false</isDryDeactivated>
+          <isFindBugsDeactivated>false</isFindBugsDeactivated>
+          <isPmdDeactivated>false</isPmdDeactivated>
+          <isOpenTasksDeactivated>false</isOpenTasksDeactivated>
+          <isWarningsDeactivated>false</isWarningsDeactivated>
+        </hudson.plugins.analysis.collector.dashboard.WarningsTablePortlet>
+      </bottomPortlets>
+    </hudson.plugins.view.dashboard.Dashboard>
+  </views>
+  <primaryView>pipelineTraining</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties>
+    <hudson.slaves.EnvironmentVariablesNodeProperty>
+      <envVars serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>0</int>
+        </tree-map>
+      </envVars>
+    </hudson.slaves.EnvironmentVariablesNodeProperty>
+  </globalNodeProperties>
+</hudson>

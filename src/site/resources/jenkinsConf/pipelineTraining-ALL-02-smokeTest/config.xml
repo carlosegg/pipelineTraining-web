@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;a href=&quot;http://www.softwaresano.com/&quot; title=&quot;SoftwareSano&quot; class=&quot;poweredBy&quot;&gt;&#xd;
+   &lt;img id=&quot;jobJenkins&quot; class=&quot;poweredBy&quot;  alt=&quot;softwaresano&quot; src=&quot;http://pimpam.googlecode.com/files/jobJenkins.png&quot;/&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.softwaresano.com/widgets/jobBuiltyBy.php&quot;&gt;&lt;/script&gt;&#xd;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;/widgets/jobBuiltyBy.php&quot;&gt;&lt;/script&gt;&#xd;
+&lt;/a&gt;&#xd;
+&lt;br/&gt;&#xd;
+Una vez que todos los módulos del proyecto están instalados, hacer unas pruebas mínimas que aseguren que funciona cada uno de los módulos&#xd;
+&lt;br/&gt;&#xd;
+Este job ha sido generada a partir de una plantilla del &lt;a href=&quot;http://code.google.com/p/develenv-pipeline-plugin/&quot; &gt;deployment pipeline&lt;/a&gt;. &#xd;
+&lt;br /&gt;&#xd;
+&lt;b style=&quot;color:#FF0000&quot;&gt;[WARNING] Falta definir el repositorio desde donde se descargarán los smokeTests&lt;/b&gt;&#xd;
+&#xd;
+</description>
+  <logRotator>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>100</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.googlecode.GoogleCodeProjectProperty plugin="googlecode@1.7"/>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.4">
+      <projectUrl>https://pdihub.hi.inet/pipeline/pipelineTraining-smokeTest/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.plugins.sidebar__link.ProjectLinks plugin="sidebar-link@1.6">
+      <links>
+        <hudson.plugins.sidebar__link.LinkAction>
+          <url>http://ci-pipeline.hi.inet/sites/pipelines/pipelineTraining/pipeline.html</url>
+          <text>Deployment Pipeline</text>
+          <icon>graph.gif</icon>
+        </hudson.plugins.sidebar__link.LinkAction>
+      </links>
+    </hudson.plugins.sidebar__link.ProjectLinks>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@1.1.26">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <name></name>
+        <refspec></refspec>
+        <url>git@pdihub.hi.inet:pipeline/pipelineTraining-smokeTest.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>origin/develop</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <localBranch>origin/develop</localBranch>
+    <disableSubmodules>false</disableSubmodules>
+    <recursiveSubmodules>false</recursiveSubmodules>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <authorOrCommitter>false</authorOrCommitter>
+    <clean>false</clean>
+    <wipeOutWorkspace>false</wipeOutWorkspace>
+    <pruneBranches>false</pruneBranches>
+    <remotePoll>false</remotePoll>
+    <ignoreNotifyCommit>false</ignoreNotifyCommit>
+    <useShallowClone>false</useShallowClone>
+    <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
+    <gitTool>Default</gitTool>
+    <browser class="hudson.plugins.git.browser.GithubWeb">
+      <url>https://pdihub.hi.inet/pipeline/pipelineTraining-smokeTest/</url>
+    </browser>
+    <submoduleCfg class="list"/>
+    <relativeTargetDir></relativeTargetDir>
+    <reference></reference>
+    <excludedRegions></excludedRegions>
+    <excludedUsers></excludedUsers>
+    <gitConfigName></gitConfigName>
+    <gitConfigEmail></gitConfigEmail>
+    <skipTag>true</skipTag>
+    <includedRegions></includedRegions>
+    <scmName></scmName>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.4">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+export DEBUG_PIPELINE=&quot;TRUE&quot;
+. /home/develenv/app/plugins/pipeline_plugin/pipeline.sh
+
+##################### DEPLOYMENT TABLE ############################
+#WARNING: No borrar la línea anterior, ya que es el separador
+# del script y de la DEPLOYMENT TABLE
+
+
+
+############################### WARNING ######################################
+# La tabla siguiente ha sido creada automáticamente a partir de la ejecución #
+# del script /home/develenv/app/plugins/pipeline_plugin/pipelineProject.sh.  #
+# Revise la configuración de dicha tabla                                     #
+# Para mas info http://code.google.com/p/develenv-pipeline-plugin            #
+##############################################################################
+#--------------+--------------------------------------------------------------
+# Enviroment   | URL 
+#--------------+--------------------------------------------------------------
+ci             | http://ci-pipeline.hi.inet/pipelineTraining
+qa             | http://pruebas-develenv2.hi.inet/pipelineTraining
+thirdparty     | http://ci-yarnottap.hi.inet/pipelineTraining
+demo           | http://ci-rmtest.hi.inet/pipelineTraining
+
+
+      </command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.4">
+      <factGenerator/>
+    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>pipelineTraining-ALL-03-acceptanceTest</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+    <xunit plugin="xunit@1.50">
+      <types>
+        <JUnitType>
+          <pattern>target/TESTS-pipeline/**/*.xml</pattern>
+          <failIfNotNew>true</failIfNotNew>
+          <deleteOutputFiles>true</deleteOutputFiles>
+          <stopProcessingIfError>true</stopProcessingIfError>
+        </JUnitType>
+      </types>
+      <thresholds>
+        <org.jenkinsci.plugins.xunit.threshold.FailedThreshold>
+          <unstableThreshold></unstableThreshold>
+          <unstableNewThreshold></unstableNewThreshold>
+          <failureThreshold></failureThreshold>
+          <failureNewThreshold></failureNewThreshold>
+        </org.jenkinsci.plugins.xunit.threshold.FailedThreshold>
+        <org.jenkinsci.plugins.xunit.threshold.SkippedThreshold>
+          <unstableThreshold></unstableThreshold>
+          <unstableNewThreshold></unstableNewThreshold>
+          <failureThreshold></failureThreshold>
+          <failureNewThreshold></failureNewThreshold>
+        </org.jenkinsci.plugins.xunit.threshold.SkippedThreshold>
+      </thresholds>
+      <thresholdMode>1</thresholdMode>
+    </xunit>
+    <hudson.plugins.emotional__hudson.EmotionalHudsonPublisher plugin="emotional-hudson@1.3"/>
+    <net.hurstfrost.hudson.sounds.HudsonSoundsNotifier plugin="sounds@0.4">
+      <soundEvents>
+        <net.hurstfrost.hudson.sounds.HudsonSoundsNotifier_-SoundEvent>
+          <soundId>EXPLODE</soundId>
+          <toResult>
+            <name>FAILURE</name>
+            <ordinal>2</ordinal>
+            <color>RED</color>
+          </toResult>
+          <fromResults>
+            <hudson.model.Result>
+              <name>FAILURE</name>
+              <ordinal>2</ordinal>
+              <color>RED</color>
+            </hudson.model.Result>
+            <hudson.model.Result>
+              <name>NOT_BUILT</name>
+              <ordinal>3</ordinal>
+              <color>NOTBUILT</color>
+            </hudson.model.Result>
+            <hudson.model.Result>
+              <name>ABORTED</name>
+              <ordinal>4</ordinal>
+              <color>ABORTED</color>
+            </hudson.model.Result>
+            <hudson.model.Result>
+              <name>SUCCESS</name>
+              <ordinal>0</ordinal>
+              <color>BLUE</color>
+            </hudson.model.Result>
+            <hudson.model.Result>
+              <name>UNSTABLE</name>
+              <ordinal>1</ordinal>
+              <color>YELLOW</color>
+            </hudson.model.Result>
+          </fromResults>
+        </net.hurstfrost.hudson.sounds.HudsonSoundsNotifier_-SoundEvent>
+      </soundEvents>
+    </net.hurstfrost.hudson.sounds.HudsonSoundsNotifier>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.3.1">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+  </buildWrappers>
+</project>
