@@ -23,14 +23,18 @@ cd pipelineTraining
 Se borran los ficheros que no se utilicen creados por este [arquitetipo maven](http://softwaresano-repomaven.googlecode.com/svn/sites/com.softwaresano.archetypes/standalone-archetype/index.html)
 
 Creamos  la primera página de este curso, es decir,  el temario. Para ello generamos
-la página [src/site/markdown/index.md](https://pdihub.hi.inet/pipeline/pipelineTraining-web/raw/7ba5fa12979dabf7434b8e3e1407eca2a7d35315/src/site/markdown/index.md)
+la página [src/site/markdown/index.md](https://raw.github.com/carlosegg/pipelineTraining-web/develop/src/site/markdown/index.md)
 
 ```
 TEMARIO
 =======
-
-* [¿Qué es la deployment Pipeline?](./deploymentPipeline.html)
-* [Ejemplo Pipeline (Este curso)](./example.html)
+  * [¿Qué es Continuous Delivery?](./cd/index.html)
+    * [¿Qué es la deployment Pipeline?](./deploymentPipeline.html)
+  * Ejemplos:
+    * [PipelineTraining (Este curso)](./example.html)
+    * [Desarrollo de develenv con la deployment pipeline](./develenv.html)
+  * Ejercicios:
+    * [Desarrollo sumadora web](./web-calculator.html)
 ```
 
 Se crea el [build.sh](https://pdihub.hi.inet/pipeline/pipelineTraining-web/raw/b41df2c691fa0a69b2f83d3433f324c9d6f16801/build.sh)
