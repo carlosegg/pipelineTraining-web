@@ -51,7 +51,8 @@ Vagrant.configure("2") do |config|
      puppet.manifests_path = "manifests"
      puppet.manifest_file  = "pipeline.pp"
      puppet.module_path = "modules"
-     puppet.options = "--verbose --debug --modulepath ../modules-0"
+     #puppet.options = "--verbose --debug --modulepath ../modules-0"
+     puppet.options = "--verbose --debug"
   end
 
   

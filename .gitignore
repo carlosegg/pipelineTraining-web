@@ -5,4 +5,4 @@ target/
 *.*~
 .svn
 .DS_Store
-.vagrant
+.vagrant/
