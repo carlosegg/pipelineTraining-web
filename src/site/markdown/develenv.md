@@ -78,10 +78,3 @@ También podemos ver que el trigger que dispara la ejecución de los jobs sigue 
 ![pdihub Service Hook](./img/training/jenkinsHook.png "pdihub Service Hook")
 
 Simplemente hay que suministrar la URL a la que debe reportar (la máquina con la instalación de Develenv).
-
-
-
-
-
-
-https://siege.tid.es/repositorio/InsTelematicsExt
