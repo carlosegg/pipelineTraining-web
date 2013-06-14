@@ -73,6 +73,12 @@ También podemos ver que el trigger que dispara la ejecución de los jobs sigue 
 
 ![Trigger de ejecuciones](./img/training/configureRepos_acceptanceTest_4.png "Trigger de ejecuciones")
 
+4. Finalmente y para que se dispare automáticamente toda la pipeline, falta configurar el Hook que permite que se inicie este flujo de jobs. Para ello, y dependiendo del software de control de versiones que usemos, tendremos que hacer unos pasos u otros. Aquí mostramos el caso de TID, donde hay una instalción de la versión Enterprise de github, en la que debemos configurar correctamente los llamados Service Hooks y en concreto uno llamado "Jenkins (GitHub plugin)":
+
+![pdihub Service Hook](./img/training/jenkinsHook.png "pdihub Service Hook")
+
+Simplemente hay que suministrar la URL a la que debe reportar (la máquina con la instalación de Develenv).
+
 
 
 
