@@ -19,12 +19,12 @@ Uso del plugin para hacer CD:
 
 Con este plugin se nos añaden diversas cosas: Jobs/Scripts/etc.. pero lo fundamental para lo que queremos ahora mismo es la de la creación de una pipeline mediante el job llamado pipeline-ADMIN-01-addPipeline:
 
-![Job pipeline-ADMIN-01-addPipeline](./img/adminPipeline_1.png "Job pipeline-ADMIN-01-addPipeline")
+![Job pipeline-ADMIN-01-addPipeline](./img/training/adminPipeline_1.png "Job pipeline-ADMIN-01-addPipeline")
 
 este job nos solicita toda una serie de información:
 organización,  project, version, modules, enviroments, adminUser como podemos ver en la siguiente captura:
 
-![Job parameters](./img/adminPipeline_2.png "Job parameters") 
+![Job parameters](./img/training/adminPipeline_2.png "Job parameters") 
 
 Una vez hemos suministrado la información correcta, este job creará todos los jobs necesarios usando los datos introducidos para generar el nombre de los mismos, quedando de la siguiente manera: 
 
@@ -39,38 +39,39 @@ Una vez hemos suministrado la información correcta, este job creará todos los 
 - project-ALL-04-smokeTest
 - project-ALL-05-acceptanceTest
 
-![Ejecutando el Job de administración](./img/adminPipeline_3.png "Ejecutando el job de administración")
+![Ejecutando el Job de administración](./img/training/adminPipeline_3.png "Ejecutando el job de administración")
 
 Customización de los jobs
 =========================
 
 Una vez tenemos los jobs creados, hay que configurar los pequeños detalles propios de los mismos, tal y como advierte la siguiente pantalla, que nos facilita enlaces para ejecutar las tareas pendientes y hacía los jobs para su customización:
 
-![Next Steps](./img/adminPipeline_4.png "Next Steps")
+![Next Steps](./img/training/adminPipeline_4.png "Next Steps")
 
 Como podemos ver los pasos son:
+
 1. Recargar Jenkins: Se han creado los jobs pero jenkins necesita releer el directorio para darse cuenta y que aparezcan en las vistas.
 
 2. Revisar la tabla de despliegues: La tabla de despligues nos permite ver de manera compacta y concisa los entornos, las máquinas que lo conforman y que paquetes (RPM) hay que desplegar en cada una de ellas. Como la instalación de los mismos (los paquetes) se hace remotamente por SSH, hay que dar el nombre de un usuario con privilegios (que al menos pueda hacer: sudo yum install). Después desde la máquina con el entorno Develenv instalado, exportar la clave SSH del usuario develenv hacía esas máquinas.
 Esta tabla aparece en el job llamado project-ALL-03-Install y es generada automáticamente a partir de los campos environments y adminUser que se suministran en el job pipeline-ADMIN-01-addPipeline:
 
-![Deployment Table](./img/installJob_deploymenTable.png "Deployment Table")
+![Deployment Table](./img/training/installJob_deploymenTable.png "Deployment Table")
 
 Esta tabla, con ligeras modificaciones aparece también en los jobs project-ALL-04-smokeTest y project-ALL-05-acceptanceTest y básicamente lo que se busca es suministrar información al job para atacar a las URLs (APIs/etc) que se sirvan como parte del desarrollo y ayudar así a verificar el despliegue y el buen funcionamiento del mismo.
 
-![somke/Acceptance Table](./img/configureRepos_acceptanceTest_5.png "Smoke/Acceptance Table")
+![somke/Acceptance Table](./img/training/configureRepos_acceptanceTest_5.png "Smoke/Acceptance Table")
 
 3. Hay que configurar el respositorio de fuentes para 3 jobs distintos: Build, smokeTest y acceptanceTest. 
 
-![Configuración repos en el job de AcceptanceTest](./img/configureRepos_acceptanceTest_1.png "Configuración de repos en el job de AcceptanceTest")
+![Configuración repos en el job de AcceptanceTest](./img/training/configureRepos_acceptanceTest_1.png "Configuración de repos en el job de AcceptanceTest")
 
 Esto es así ya que se contempla que, el código y los test que comprueban su correcta instalación y funcionamiento E2E, puedan estar en repos distintos.
 
-![Configuración repos en el job de AcceptanceTest](./img/configureRepos_acceptanceTest_2.png "Configuración de repos en el job de AcceptanceTest")
+![Configuración repos en el job de AcceptanceTest](./img/training/configureRepos_acceptanceTest_2.png "Configuración de repos en el job de AcceptanceTest")
 
 También podemos ver que el trigger que dispara la ejecución de los jobs sigue el orden comentado más arriba:
 
-![Trigger de ejecuciones](./img/configureRepos_acceptanceTest_4.png "Trigger de ejecuciones")
+![Trigger de ejecuciones](./img/training/configureRepos_acceptanceTest_4.png "Trigger de ejecuciones")
 
 
 
