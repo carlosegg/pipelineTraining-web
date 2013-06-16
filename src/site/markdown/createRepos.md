@@ -56,7 +56,7 @@ un hook a la configuración del repo. Para ello se accede a [https://pdihub.hi.i
   git init
   git add README.md
   git commit -m "first commit"
-  git remote add origin git@pdihub.hi.inet:pipeline/pipelineTraining-acceptanceTest.git
+  git remote add origin git@github.com:carlosegg/pipelineTraining-acceptanceTest.git
   git push -u origin master
   git checkout -b develop
   git push origin develop

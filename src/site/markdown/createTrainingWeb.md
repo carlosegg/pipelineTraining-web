@@ -37,7 +37,7 @@ TEMARIO
     * [Desarrollo sumadora web](./web-calculator.html)
 ```
 
-Se crea el [build.sh](https://pdihub.hi.inet/pipeline/pipelineTraining-web/raw/b41df2c691fa0a69b2f83d3433f324c9d6f16801/build.sh)
+Se crea el [build.sh](https://github.com/carlosegg/pipelineTraining-web/blob/4d483bc36c9eb345d8680a17e8a2bb1f0dd0f0d8/build.sh)
 necesario para construir el proyecto 
 
 ```
@@ -51,13 +51,13 @@ Se les da permisos de ejecución
 ```
 chmod u+x build.sh
 ```
-Se hace el [primer commit](https://pdihub.hi.inet/pipeline/pipelineTraining-web/tree/b41df2c691fa0a69b2f83d3433f324c9d6f16801) al repositorio
+Se hace el [primer commit](https://github.com/carlosegg/pipelineTraining-web/tree/b85f2089db0e359e585135ba12eb0988e0ae26d7) al repositorio
 
 ```
 git init
 git add *
 git commit -a -m "Initial"
-git remote add origin git@pdihub.hi.inet:carlosg/pipelineTraining.git
+git remote add origin git@github.hi.inet:carlosegg/pipelineTraining-web.git
 git push -u origin master
 git checkout -b develop
 git push origin develop
@@ -69,10 +69,8 @@ Empaquetado del proyecto
 Se utilizará la distribución Centos para desplegar esta aplicación web corriendo bajo apache. Por 
 tanto es necesario crear un **rpm**. 
 
-El fichero [web.spec](https://pdihub.hi.inet/pipeline/pipelineTraining-web/blob/b258ac7a63c68db03ac42fced07fa1b3be266714/src/main/rpm/SPECS/web.spec)
+El fichero [web.spec](https://github.com/carlosegg/pipelineTraining-web/blob/develop/src/main/rpm/SPECS/web.spec)
 contiene los scripts necesarios para la creación, instalación y desinstalación del
 **rpm**.
 
-Además se ha de definir el fichero de [configuración de apache](https://pdihub.hi.inet/pipeline/pipelineTraining-web/blob/ebccca4cc7dd2b4c341849cff457e43e8de61128/src/main/rpm/SOURCES/pipelineTraining/pipelineTraining.conf)
-
-
+Además se ha de definir el fichero de [configuración de apache](https://github.com/carlosegg/pipelineTraining-web/blob/b85f2089db0e359e585135ba12eb0988e0ae26d7/src/main/rpm/SOURCES/pipelineTraining/pipelineTraining.conf)

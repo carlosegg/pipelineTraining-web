@@ -4,6 +4,7 @@ TEMARIO
     * [¿Qué es la deployment Pipeline?](./deploymentPipeline.html)
   * Ejemplos:
     * [PipelineTraining (Este curso)](./example.html)
+    * [Desarrollo sumadora web](./examples/web-calculator/index.html)
     * [Desarrollo de develenv con la deployment pipeline](./develenv.html)
   * Ejercicios:
-    * [Desarrollo sumadora web](./web-calculator.html)
+    * [Desarrollo sumadora web](./examples/web-calculator/index.html)
