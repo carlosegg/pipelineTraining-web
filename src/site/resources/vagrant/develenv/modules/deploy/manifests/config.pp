@@ -15,4 +15,7 @@ class deploy::config {
     password        => $password,
     profile         => $profile,
   }
+  file { "/etc/hosts":
+      content => "127.0.0.1\tlocalhost localhost.localdomain localhost4 localhost4.localdomain4\n::1\tlocalhost localhost.localdomain localhost6 localhost6.localdomain6\n127.0.0.1\t$hostname\n192.168.33.3\tintegration\n192.168.33.4\tqa\n192.168.33.5\tprod-frontend\n192.168.33.6\tprod-backend\n",
+    }
 }
