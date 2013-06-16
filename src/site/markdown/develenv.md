@@ -4,6 +4,7 @@ Continuous Delivery con Develenv:
 * [Introducción] (#Introduccin)
 * [Uso del plugin para hacer CD] (#Uso_del_plguin_para_hacer_CD)
 * [Customizción de los jobs] (#Customizacin_de_los_jobs)
+* [Develenv con Develenv y la deployment pipeline] (#Develenv_con_develenv_y_la_deployment_pipeline)
 
 Introducción:
 -------------
@@ -33,7 +34,7 @@ Una vez hemos suministrado la información correcta, este job creará todos los 
 - project-module-01-build
 - project-module-02-Package
 
-### Para cada entorno: ####
+### Agrupados en una pipeline de instalación y verificación: ####
 
 - project-ALL-03-Install
 - project-ALL-04-smokeTest
@@ -78,3 +79,18 @@ También podemos ver que el trigger que dispara la ejecución de los jobs sigue 
 ![pdihub Service Hook](./img/training/jenkinsHook.png "pdihub Service Hook")
 
 Simplemente hay que suministrar la URL a la que debe reportar (la máquina con la instalación de Develenv).
+
+Develenv con Develenv y la deployment pipeline
+----------------------------------------------
+
+Para rizar el rizo y ser consecuentes con lo predicado, hemos usado el propio modelo de Continuous Delivery para construir Develenv. Así, hemos creado una pipeline que nos permite construir el proyecto develenv, empaquetarlo, instalarlo en algunas máquinas y verificar que esta instalación se ha completado con éxito y que ofrece la funcionalidad deseada, aquí podemos ver esa pipline:
+
+![Develenv with Develenv](./img/training/develenvWithDevelenv.png "Develenv with Develenv")
+
+En la siguiente imagen podemos ver las instalaciones en los distintos entornos (int y qa) y las pruebas que han superado cada una de ellas:
+
+![Develenv Dashboard](./img/training/develenvDashboard_1.png "Develenv Dashboard")
+
+En el mismo enlace podemos ver el estado actual de cada entorno, las máquinas que lo conforman, los paquetes instalados en cada uno de ellos, que build es el que se ha instalado y el posible rollback, a parte de todas las ejecuciones de la pipeline, con la fecha y hora, el número de build y el estado en el que están los entornos.
+
+![Develenv Dashboard](./img/training/develenvDashboard_2.png "Develenv Dashboard")
