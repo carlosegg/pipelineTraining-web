@@ -75,6 +75,8 @@ Al cabo de unos minutos debería estar arrancado develenv:
 http://192.168.33.2/jenkins, http://192.168.33.2/sonar, http://192.168.33.2/nexus
 y http://192.168.33.2/grid/console
 
+*NOTA!!* _Lo mejor es añadir esta máquina al /etc/hosts de la máquina donde se levantan las virtuales con vagrant._
+
 La configuración de usuarios y password de esta máquina es:
 
 ```
