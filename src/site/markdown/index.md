@@ -7,5 +7,5 @@ TEMARIO
     * [Desarrollo sumadora web](./examples/web-calculator/index.html)
     * [Desarrollo de develenv con la deployment pipeline](./develenv.html)
   * Ejercicios:
-    * [Ampliación pipeline training](./exercies/pipelineTraining/index.html)
-    * [Ampliación sumadora web](./exercies/web-calculator/index.html)
+    * [Ampliación pipeline training](./exercises/pipelineTraining/index.html)
+    * [Ampliación sumadora web](./exercises/web-calculator/index.html)
