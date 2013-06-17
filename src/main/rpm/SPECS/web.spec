@@ -21,7 +21,7 @@ Requires:  httpd >= 2.2
 
 
 %description
-Pipeline training web
+Pipeline training web.
 
 %prep
 
