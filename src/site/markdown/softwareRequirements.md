@@ -18,6 +18,12 @@ cada máquina se alojarán 3 máquinas virtuales (1 para
 los entornos de despliegue de 512Mb de RAM). 
 Por tanto se recomiendan máquinas físicas con al menos 4Gb de RAM.
 
+El esquema de red sería el siguiente:
+
+![Esquema de red](./img/training/DisenoDeRed.png "Esquema de red")
+
+Donde podemos ver que todas las máquinas virtuales están en la misma red (192.168.33.0/24).
+
 Software de terceros
 --------------------
 
