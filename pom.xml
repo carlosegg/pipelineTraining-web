@@ -4,19 +4,19 @@
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
    <!-- Identificador del componente -->
-   <groupId>com.pdi.training.pipeline</groupId>
+   <groupId>com.ss.training.pipeline</groupId>
    <artifactId>pipelineTraining</artifactId>
    <version>1.0-SNAPSHOT</version>
    <packaging>jar</packaging>
    <name>training</name>
    <description>Web para el curso de la deployment pipeline</description>
    <organization>
-      <name>pdi</name>
-      <url>https://www.tid.es</url>
+      <name>ss</name>
+      <url>http://www.softwaresano.com</url>
    </organization>
    <!-- [MODIFICAR] la URL del proyecto. Ojo no suprimir la URL, ya que es 
       obligatoria para el maven-changes-plugin -->
-   <url>http://ironman.hi.inet/sites/com.pdi.training.pipeline/pipelineTraining 
+   <url>http://develenv/sites/com.ss.training.pipeline/pipelineTraining 
     </url>
    <licenses>
       <license>
@@ -64,9 +64,9 @@
    <!-- Configuración del SCM (SVN) -->
    <!-- [MODIFICAR] Poner las urls del SVN correspondiente, sin utilizar propiedades -->
    <scm>
-      <connection>scm:git:git@pdihub.hi.inet:pipeline/pipelineTraining-web.git</connection>
-      <developerConnection>scm:git:git@pdihub.hi.inet:pipeline/pipelineTraining-web.git</developerConnection>
-      <url>https://pdihub.hi.inet/pipeline/pipelineTraining-web.git</url>
+      <connection>scm:git:git@github.com:carlosegg/pipelineTraining-web.git</connection>
+      <developerConnection>scm:git:git@github.com:carlosegg/pipelineTraining-web.git</developerConnection>
+      <url>https://github.com/carlosegg/pipelineTraining-web/</url>
    </scm>
    <build>
       <plugins>
@@ -300,7 +300,7 @@
       <site>
          <id>${repoSiteId}</id>
          <name>${repoSiteName}</name>
-         <url>${repoSiteUrl}/com.pdi.training.pipeline/training 
+         <url>${repoSiteUrl}/com.ss.training.pipeline/training 
             </url>
       </site>
    </distributionManagement>
@@ -725,13 +725,13 @@
       </pluginRepository>
    </pluginRepositories>
    <properties>
-      <organization.acronym>pdi</organization.acronym>
+      <organization.acronym>ss</organization.acronym>
       <!-- Forzamos a los plugins a utilizar UTF-8, para evitar problemas con 
          los encodings por defectos de los diferentes sistemas operativos -->
       <jvm.version>1.6</jvm.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-      <copyright.year>2012</copyright.year>
+      <copyright.year>2013</copyright.year>
       <maven-surefire-plugin.version>2.12.3</maven-surefire-plugin.version>
       <junit.version>4.10</junit.version>
       <jmock.version>2.5.1</jmock.version>
