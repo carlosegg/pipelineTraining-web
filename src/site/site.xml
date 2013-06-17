@@ -30,7 +30,12 @@
 </script>
 
 <link href="http://pimpam.googlecode.com/files/favicon.ico" rel="shortcut icon" />
+        
     </head>
+        <links>
+            <item name="Contacto" href="team-list.html" />
+            <item name="develenv" href="http://develenv.softwaresano.com" />
+        </links>
         <menu name="Temario">
             <item name="Continuous Delivery" href="cd/index.html" />
             <item name="Deployment Pipeline" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#INTRODUCCIN" />
