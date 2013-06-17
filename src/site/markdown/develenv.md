@@ -5,6 +5,7 @@ Continuous Delivery con Develenv:
 * [Uso del plugin para hacer CD] (#Uso_del_plguin_para_hacer_CD)
 * [Customizción de los jobs] (#Customizacin_de_los_jobs)
 * [Develenv con Develenv y la deployment pipeline] (#Develenv_con_Develenv_y_la_deployment_pipeline)
+* [Uso de vagrant para desarrollo] (#Uso_de_vagrant_para_desarrollo)
 
 Introducción:
 -------------
@@ -94,3 +95,11 @@ En la siguiente imagen podemos ver las instalaciones en los distintos entornos (
 En el mismo enlace podemos ver el estado actual de cada entorno, las máquinas que lo conforman, los paquetes instalados en cada uno de ellos, que build es el que se ha instalado y el posible rollback, a parte de todas las ejecuciones de la pipeline, con la fecha y hora, el número de build y el estado en el que están los entornos.
 
 ![Develenv Dashboard](./img/training/develenvDashboard_2.png "Develenv Dashboard")
+
+Uso de vagrant para desarrollo
+------------------------------
+
+Como sabéis vagrant nos permite crear entornos de desarrollo ligeros, repetibles y portables, existen versiones tanto para Linux, MacOS o incluso Windows y el formato es exportable entre estos sistemas. Tiene diversos mecanismos de provision (Chef y pupppet), que nos permiten dejar la máquina configurada para el desarrollo del proyecto/iniciativa en el que estemos trabajando.
+La idea es: usar la combinación de vagrant y puppet para crear máquinas virtuales que puedan funcionar en los entornos de los developers de los distintos proyectos, y que les permitan hacer test del código desarrolladdo por ellos de manera rápida y sencilla, sin tener que esperar a que se dispare una ejecución completa en el servidor de integración continua.
+
+En el proyecto pipelineTraining-web y concretamente en el directorio src/site/resources/vagrant podemos encontrar 5 directorios: develenv, integration, prod-backend, prod-frontend y qa, donde se pueden ver ejemplos de esta idea, con los ficheros Vagrantfile y los perfiles de puppet para dejar las máquinas configuradas para que conformen una arquitectura completa.
