@@ -37,21 +37,25 @@
             <item name="Ejemplos" href="examples.html" />
             <item name="Ejercicios" href="exercises.html" />
         </menu>
-        <menu name="Temario">
-            <item name="Continuous Delivery" href="cd/index.html" />
-            <item name="Deployment Pipeline" href="deploymentPipeline.html" />
-            <item name="Ejemplos" href="examples.html" />
-            <item name="Ejercicios" href="exercises.html" />
+        <menu name="Continuos Delivery">
+            <item name="¿Qué és?" href="cd/index.html" />
+            <item name="Objetivos" href="cd/objectives.html" />
+            <item name="Continuous Delivery Pipeline" href="cdPipeline.html" />
+            <item name="Entornos de referencia" href="referenceEnvironments.html" />
+            <item name="Herramientas" href="tools.html" />
+            <item name="Riesgos" href="risks.html" />
+            <item name="Futuro del CD" href="future.html" />
         </menu>
-        <menu name="Ejemplo deployment Pipeline">
-            <item name="Introducci&oacute;n" href="example.html" />
-            <item name="Desarrollo del proyecto" href="projectDevelopment.html" />
-            <item name="Creaci&oacute;n" href="createPipeline.html" />
-            <item name="Ejecuci&oacute;n" href="executePipeline.html" />
+        <menu name="Deployment Pipeline">
+            <item name="¿Qué es?" href="http://develenv.softwaresano.com/deploymentPipeline/index.html" />           
+        </menu>
+        <menu name="Ejemplos">
+            <item name="Este curso" href="example.html" />
+            <item name="Calculadora web" href="web-calculator/index.htm" />
         </menu>
         <menu name="Ejercicios">
-            <item name="Sumadora web" href="web-calculator.md" />
-        </menu>
+            <item name="Este curso" href="example.html" />
+            <item name="Calculadora web" href="web-calculator/index.htm" />        </menu>
         <menu ref="reports" />
     </body>
 </project>
