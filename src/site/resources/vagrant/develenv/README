@@ -1,0 +1,3 @@
+los ficheros upload_repo.sh y el fabfile.py son parches para resolver un problema
+que nos ha surgido con los repositorios que se instalan con develenv, hay que usar
+alguno de ellos para dejar el repo correcto.
