@@ -30,21 +30,40 @@
 </script>
 
 <link href="http://pimpam.googlecode.com/files/favicon.ico" rel="shortcut icon" />
+        
     </head>
+        <links>
+            <item name="Contacto" href="team-list.html" />
+            <item name="develenv" href="http://develenv.softwaresano.com" />
+        </links>
         <menu name="Temario">
-            <item name="Continuous Delivery" href="deploymentPipeline.html" />
-            <item name="Deployment Pipeline" href="deploymentPipeline.html" />
-            <item name="Ejemplos" href="examples.html" />
-            <item name="Ejercicios" href="exercises.html" />
+            <item name="Continuous Delivery" href="cd/index.html" />
+            <item name="Deployment Pipeline" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#INTRODUCCIN" />
         </menu>
-        <menu name="Ejemplo deployment Pipeline">
-            <item name="Introducci&oacute;n" href="example.html" />
-            <item name="Desarrollo del proyecto" href="projectDevelopment.html" />
-            <item name="Creaci&oacute;n" href="createPipeline.html" />
-            <item name="Ejecuci&oacute;n" href="executePipeline.html" />
+        <menu name="Continuos Delivery">
+            <item name="¿Qué és?" href="cd/index.html" />
+            <item name="Objetivos" href="cd/objectives.html" />
+            <item name="Continuous Delivery Pipeline" href="cd/cdPipeline.html" />
+            <item name="Entornos de referencia" href="cd/referenceEnvironments.html" />
+            <item name="Herramientas" href="cd/tools.html" />
+            <item name="Riesgos" href="cd/risks.html" />
+            <item name="Futuro del CD" href="cd/future.html" />
+        </menu>
+        <menu name="Deployment Pipeline">
+            <item name="Introducción" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#INTRODUCCIN" />
+            <item name="Instalación" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#INSTALACIN" />
+            <item name="Definición de una pipeline" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#DEFINICIN_DE_UN_PIPELINE" />
+            <item name="Primeros pasos" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#PRIMEROS_PASOS" />
+            <item name="Ejecución" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#EJECUCIN" />           
+            <item name="Limitaciones" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#LIMITACIONES_DEL_PIPELINE" />
+        </menu>
+        <menu name="Ejemplos">
+            <item name="Este curso" href="example.html" />
+            <item name="Calculadora web" href="examples/web-calculator/index.html" />
         </menu>
         <menu name="Ejercicios">
-            <item name="Sumadora web" href="web-calculator.md" />
+            <item name="Este curso" href="exercises/pipelineTraining/index.html" />
+            <item name="Calculadora web" href="exercises/web-calculator/index.htm" />    
         </menu>
         <menu ref="reports" />
     </body>

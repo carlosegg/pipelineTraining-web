@@ -3,13 +3,13 @@ Summary:   Pipeline training web
 Version:   %{versionModule}
 Release:   %{releaseModule}
 License:   GPL 3.0
-Packager:  pdi
-Vendor:    tid.es
+Packager:  ss
+Vendor:    softwaresano
 Group:     pipeline
 BuildArch: noarch
 
 Requires:  httpd >= 2.2
-%define prefix_organization pdi
+%define prefix_organization ss
 %define package_name web
 %define _prefix_   %{_usr}/local
 %define project_user %{package_name}
@@ -21,7 +21,7 @@ Requires:  httpd >= 2.2
 
 
 %description
-Pipeline training web
+Pipeline training web.
 
 %prep
 
