@@ -16,7 +16,7 @@ Se genera el proyecto a partir de un [arquitetipo maven](http://softwaresano-rep
 cd workspace
 mvn -DarchetypeRepository=https://softwaresano-repomaven.googlecode.com/svn/archetypes-snapshots \
     -DarchetypeGroupId=com.softwaresano.archetypes -DarchetypeArtifactId=standalone-archetype -DarchetypeVersion=1.0.30-SNAPSHOT \
-    -DgroupId=com.pdi.training.pipeline -DartifactId=pipelineTraining -Dpackage=com.pdi.training.pipeline.training -Dversion=1.0-SNAPSHOT \
+    -DgroupId=com.ss.training.pipeline -DartifactId=pipelineTraining -Dpackage=com.ss.training.pipeline.training -Dversion=1.0-SNAPSHOT \
     -DinteractiveMode=false archetype:generate
 cd pipelineTraining
 ```

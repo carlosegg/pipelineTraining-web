@@ -32,7 +32,13 @@
 <link href="http://pimpam.googlecode.com/files/favicon.ico" rel="shortcut icon" />
     </head>
         <menu name="Temario">
-            <item name="Continuous Delivery" href="deploymentPipeline.html" />
+            <item name="Continuous Delivery" href="cd/index.html" />
+            <item name="Deployment Pipeline" href="deploymentPipeline.html" />
+            <item name="Ejemplos" href="examples.html" />
+            <item name="Ejercicios" href="exercises.html" />
+        </menu>
+        <menu name="Temario">
+            <item name="Continuous Delivery" href="cd/index.html" />
             <item name="Deployment Pipeline" href="deploymentPipeline.html" />
             <item name="Ejemplos" href="examples.html" />
             <item name="Ejercicios" href="exercises.html" />
