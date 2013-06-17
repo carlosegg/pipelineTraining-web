@@ -29,16 +29,25 @@
       desarrolladores -->
    <developers>
       <developer>
-         <id>${userId}</id>
-         <name>${userName}</name>
-         <email>${userMail}</email>
+         <id>carlosegg</id>
+         <name>Carlos E. Gómez</name>
+         <email>carlosegg@gmail.com</email>
          <roles>
-            <role>${userRole}</role>
+            <role>developer</role>
          </roles>
-         <organization>${userOrganization}</organization>
+         <organization>softwaresano.com</organization>
          <timezone>+1</timezone>
       </developer>
    </developers>
+   <contributors>
+    <contributor>
+      <name>eescorihuelan</name>
+      <email>eescorihuelan@gmail.com</email>
+      <roles>
+         <role>colaborator</role>
+      </roles>
+    </contributor>
+  </contributors>
    <!-- Entorno de integración contínua -->
    <!-- [MODIFICAR] Añadir todos los correos a los que llegarán las notificaciones 
       de errores o solución de errores -->

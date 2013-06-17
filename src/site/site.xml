@@ -33,9 +33,7 @@
     </head>
         <menu name="Temario">
             <item name="Continuous Delivery" href="cd/index.html" />
-            <item name="Deployment Pipeline" href="deploymentPipeline.html" />
-            <item name="Ejemplos" href="examples.html" />
-            <item name="Ejercicios" href="exercises.html" />
+            <item name="Deployment Pipeline" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#INTRODUCCIN" />
         </menu>
         <menu name="Continuos Delivery">
             <item name="¿Qué és?" href="cd/index.html" />
@@ -56,11 +54,11 @@
         </menu>
         <menu name="Ejemplos">
             <item name="Este curso" href="example.html" />
-            <item name="Calculadora web" href="web-calculator/index.htm" />
+            <item name="Calculadora web" href="examples/web-calculator/index.html" />
         </menu>
         <menu name="Ejercicios">
-            <item name="Este curso" href="example.html" />
-            <item name="Calculadora web" href="web-calculator/index.htm" />    
+            <item name="Este curso" href="exercises/pipelineTraining/index.html" />
+            <item name="Calculadora web" href="exercises/web-calculator/index.htm" />    
         </menu>
         <menu ref="reports" />
     </body>
