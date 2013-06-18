@@ -2,7 +2,9 @@ EJEMPLO DEPLOYMENT PIPELINE
 ===========================
 
 El objetivo de este ejemplo es crear una web donde se explique el funcionamiento
-de la **deployment pipeline**
+de la **deployment pipeline**. Esta web debería ser desplegada en una url del
+tipo http://host/pipelineTraining 
+
 
 * [Conocimientos previos] (#Conocimientos_previos)
 * [Requisitos software] (./softwareRequirements.html)

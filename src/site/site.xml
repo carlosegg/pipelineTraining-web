@@ -57,13 +57,21 @@
             <item name="Ejecución" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#EJECUCIN" />           
             <item name="Limitaciones" href="http://develenv.softwaresano.com/deploymentPipeline/index.html#LIMITACIONES_DEL_PIPELINE" />
         </menu>
-        <menu name="Ejemplos">
-            <item name="Este curso" href="example.html" />
+        <menu name="Ejemplo PipelineTraining">
+            <item name="Introducción" href="example.html" />
+            <item name="Conocimientos previos" href="example.html#Conocimientos_previos" />
+            <item name="Requisitos Hw y Sw" href="./softwareRequirements.html" />
+            <item name="Configuración entornos de desarrollo" href="example.html#Configuracin_entornos_de_desarrollo" />
+            <item name="Desarrollo del proyecto" href="./projectDevelopment.html" />
+            <item name="Creación de la pipeline" href="./createPipeline.html" />
+            <item name="Ejecución de la pipeline" href="./executePipeline.html" />
+        </menu>
+        <menu name="Otros ejemplos">
             <item name="Calculadora web" href="examples/web-calculator/index.html" />
         </menu>
         <menu name="Ejercicios">
             <item name="Este curso" href="exercises/pipelineTraining/index.html" />
-            <item name="Calculadora web" href="exercises/web-calculator/index.htm" />    
+            <item name="Calculadora web" href="exercises/web-calculator/index.html"/>    
         </menu>
         <menu ref="reports" />
     </body>
