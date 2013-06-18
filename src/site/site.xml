@@ -73,6 +73,9 @@
             <item name="Este curso" href="exercises/pipelineTraining/index.html" />
             <item name="Calculadora web" href="exercises/web-calculator/index.html"/>    
         </menu>
+        <menu name="Bibliografía">
+            <item name="Continuous Delivery" href="http://martinfowler.com/books/continuousDelivery.html"/>    
+        </menu>
         <menu ref="reports" />
     </body>
 </project>
