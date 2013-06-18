@@ -33,3 +33,6 @@ SUMADORA WEB
         * 6.2   [Despliegue](../../img/examples/webCalculator/dp_qa.png)
       * 7. Exportación repositorios
         * 7.1   [Ejecución](../../img/examples/webCalculator/exportRepo.png)
+        * 7.2   [Exportado](../../img/examples/webCalculator/exportedRepo.png)
+        * 7.3   [Job Jenkins](../../img/examples/webCalculator/dp_export.png)
+        * 7.4   [Guía de instalación del repo](../../img/examples/webCalculator/exportRepoGuide.png) 
