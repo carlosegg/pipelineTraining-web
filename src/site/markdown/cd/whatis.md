@@ -1,7 +1,9 @@
 ¿QUÉ ES CONTINOUS DELIVERY?
 ===========================
+
 Continuous Delivery trata de tener siempre el software en un estado instalable, para ello hacen falta diversas cosas, entre ellas:
-  * Un mecanismo que nos permita detectar los errores e identificar en que fase se han producido (y si es posible, que los ha provocado)
+
+  * Un mecanismo que nos permita detectar los errores e identificar en que fase se han producido (y si es posible, qué los ha provocado)
     * Cuantos más errores detectemos en las fases inciales del proyecto mejor
   * Un acuerdo del grupo de development para usar:
     * Integración continua
