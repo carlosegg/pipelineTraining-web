@@ -15,7 +15,9 @@ Requires:  httpd >= 2.2
 %define project_user %{package_name}
 %define component_home /etc/%{prefix_organization}/%{_project_name}/pipelineTraining 
 %define web_home /opt/%{prefix_organization}/%{_project_name}/web/pipelineTraining/
-
+%define pipeline_home /opt/pipeline/%{prefix_organization}/%{_project_name}/enviroment
+%define enviroments_dir /var/tmp/%{package_name}/enviroments
+%define source_enviroments_dir %{_sourcedir}/pipeline_training/../enviroments
 
 
 %description
@@ -25,6 +27,7 @@ Pipeline training web.
 
 _log "Building package %{name}-%{version}-%{release}"
 [ -d $RPM_BUILD_ROOT/%{component_home} ] || %{__mkdir_p} $RPM_BUILD_ROOT/%{component_home}
+[ -d $RPM_BUILD_ROOT/%{enviroments_dir} ] || %{__mkdir_p} $RPM_BUILD_ROOT/%{enviroments_dir}
 [ -d $RPM_BUILD_ROOT/%{web_home} ] || %{__mkdir_p} $RPM_BUILD_ROOT/%{web_home}/
 
 
@@ -36,6 +39,9 @@ if [ -d "%{_sourcedir}/pipelineTraining" ]; then
    %{__cp} -R %{_sourcedir}/pipelineTraining/* ${RPM_BUILD_ROOT}/%{component_home}
 fi
 
+if [ -d "%{source_enviroments_dir}" ]; then
+   %{__cp} -R %{source_enviroments_dir}/* ${RPM_BUILD_ROOT}/%{enviroments_dir}
+fi
 
 %{__cp} -R "%{_srcrpmdir}/../target/site/"* "$RPM_BUILD_ROOT/%{web_home}/" 
 
@@ -45,8 +51,10 @@ fi
 %files
 %attr (-,%{project_user},%{project_user}) /%{web_home}/
 %config %attr (-,%{project_user},%{project_user}) %{component_home}
+%config %attr (-,%{project_user},%{project_user}) %{enviroments_dir}
 
 %pre
+
 
 [ "`grep \"^%{project_user}:\" /etc/passwd`" == "" ] && useradd %{project_user}
 sed -i s:"/home/%{project_user}\:/bin/sh":"/sbin/nologin\:/bin/bash":g /etc/passwd
@@ -74,6 +82,8 @@ enablePorts(){
    fi
 }
 
+rm -Rf %{enviroments_dir}
+
 rm -Rf "/var/www/%{_project_name}"
 ln -s "%{web_home}" "/var/www/%{_project_name}"
 
@@ -94,4 +104,3 @@ service httpd stop
 %postun
 _log "Starting apache" 
 service httpd start 
-
