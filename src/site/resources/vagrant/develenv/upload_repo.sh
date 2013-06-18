@@ -22,3 +22,8 @@ chattr +i /home/develenv/app/repositories/rpms/noarch/ss-develenv-repo-1.0-0.0.n
 
 # Creating repo
 createrepo -s sha -d --update /home/develenv/app/repositories/rpms/noarch
+
+# Installing the correct version of pipeline_plugin
+# First erase the data on destination dir:
+rm -rf /home/develenv/app/plugins/pipeline_plugin
+tar -xvzf ./pipeline_plugin.tar.gz -C /home/develenv/app/plugins/
