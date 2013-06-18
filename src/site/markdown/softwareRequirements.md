@@ -4,8 +4,8 @@ REQUISITOS SOFTWARE
 Para realizar este workshop sobre continuous delivery, es necesario
 tener instalado y configurado el siguiente software.
 
+* [Reauisitos Hardwar] (#Requisitos_Harwware)
 * [Software de terceros] (#Software_de_tercerops)
-* [Entorno de desarrollo] (#Conocimientos_previos)
 * [Configuración de develenv](#Configuración_de_develenv)
 * [Entornos de despliegue] (#Entornos_de_despliegue)
 
