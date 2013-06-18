@@ -100,7 +100,6 @@ enablePorts
 %preun
 _log "Shutdown apache" 
 service httpd stop
-rm -Rf /etc/httpd/conf.d/pipelineTraining.conf
 
 %postun
 _log "Starting apache" 
