@@ -103,3 +103,11 @@ Como sabéis vagrant nos permite crear entornos de desarrollo ligeros, repetible
 La idea es: usar la combinación de vagrant y puppet para crear máquinas virtuales que puedan funcionar en los entornos de los developers de los distintos proyectos, y que les permitan hacer test del código desarrolladdo por ellos de manera rápida y sencilla, sin tener que esperar a que se dispare una ejecución completa en el servidor de integración continua.
 
 En el proyecto pipelineTraining-web y concretamente en el directorio src/site/resources/vagrant podemos encontrar 5 directorios: develenv, integration, prod-backend, prod-frontend y qa, donde se pueden ver ejemplos de esta idea, con los ficheros Vagrantfile y los perfiles de puppet para dejar las máquinas configuradas para que conformen una arquitectura completa.
+
+Para el caso de Develenv, podemos encontrar el fichero Vagrant, los perfiles de puppet y todo lo necesario para contribuir al  desarrollo del proyecto en el siguiente [enlace] (http://develenv.softwaresano.com/development.html) y si se quisiera desplegar Develenv en una máquina Vagrant, basta con hacer un checkout del directorio:
+
+```
+svn co http://develenv.googlecode.com/svn/trunk/develenv/src/main/deploy/puppet deployDevelenv
+cd deployDevelenv # Revisar los paths en el Vagrantfile
+vagrant up
+```
