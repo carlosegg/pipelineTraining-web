@@ -2,7 +2,7 @@
 CURSO DEPLOYMENT PIPELINE
 =========================
 
-[![Build Status](http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/badge/icon)](http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-web-ALL-03-acceptanceTest/)
+[![Build Status](http://develenv/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/badge/icon)](http://develenv/jenkins/job/pipelineTraining-web-ALL-03-acceptanceTest/)
 
 1. Introducción
 ================
