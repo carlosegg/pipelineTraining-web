@@ -14,7 +14,7 @@ Creando pipeline
 ## Creación de la pipeline
 La creación y administración de la pipeline se puede hacer a través de jenkins.
 
-[http://ci-pipeline.hi.inet/jenkins/view/Admin%20pipelines/](http://ci-pipeline.hi.inet/jenkins/view/Admin%20pipelines/)
+[http://develenv/jenkins/view/Admin%20pipelines/](http://develenv/jenkins/view/Admin%20pipelines/)
 
 ### Job de creación de la pipeline
 ![Job de creación de la pipeline](./img/training/adminPipeline_1.png)
@@ -30,13 +30,13 @@ La creación y administración de la pipeline se puede hacer a través de jenkin
 
 ## Configuración de la pipeline
 ### Revisar deployment table
-[http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-ALL-01-install/configure](http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-ALL-01-install/configure)
+[http://develenv/jenkins/job/pipelineTraining-ALL-01-install/configure](http://develenv/jenkins/job/pipelineTraining-ALL-01-install/configure)
 
 ![Revisar deployment table](./img/training/reviewDeploymentTable.png)
 
 
 ### Configuración repositorios
-[http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/configure](http://ci-pipeline.hi.inet/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/configure)
+[http://develenv/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/configure](http://develenv/jenkins/job/pipelineTraining-ALL-03-acceptanceTest/configure)
 
 ![Configuración repositorio](./img/training/configureRepos_acceptanceTest_1.png)
 
