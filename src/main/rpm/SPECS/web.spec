@@ -9,7 +9,7 @@ Group:     pipeline
 BuildArch: noarch
 
 Requires:  httpd >= 2.2
-%define prefix_organization ss
+%define prefix_organization pdi
 %define package_name web
 %define _prefix_   %{_usr}/local
 %define project_user %{package_name}
