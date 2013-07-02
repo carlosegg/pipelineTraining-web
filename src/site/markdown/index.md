@@ -9,3 +9,7 @@ TEMARIO
   * Ejercicios:
     * [Ampliación pipeline training](./exercises/pipelineTraining/index.html)
     * [Ampliación sumadora web](./exercises/web-calculator/index.html)
+  * Algunos ejemplos en PDI:
+    * [MyHealth](http://ci-myhealth1.hi.inet/sites/pipelineReport/index.html?&executorPipelines=myhealth%28ci-myhealth1.hi.inet%29)
+    * [YarnWeb](http://ci-pipeline/sites/pipelineReport/index.html?&executorPipelines=yarnWeb%28ci-yarnottap.hi.inet%29)
+    * [TDGA](http://ci-pipeline/sites/pipelineReport/index.html?&executorPipelines=TDGA%28ci-tdga.hi.inet%29)
