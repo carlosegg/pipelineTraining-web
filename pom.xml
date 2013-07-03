@@ -734,7 +734,7 @@
       </pluginRepository>
    </pluginRepositories>
    <properties>
-      <organization.acronym>pdi</organization.acronym>
+      <organization.acronym>ss</organization.acronym>
       <!-- Forzamos a los plugins a utilizar UTF-8, para evitar problemas con 
          los encodings por defectos de los diferentes sistemas operativos -->
       <jvm.version>1.6</jvm.version>
