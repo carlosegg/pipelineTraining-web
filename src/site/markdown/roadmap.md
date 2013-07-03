@@ -7,3 +7,5 @@ ROADMAP
   * Gestión de rollbacks que impliquen bases de datos
   * Motor de orquestación (standalone). Independiente de jenkins
   * Provisionado de máquinas.
+  * Clonado de pipelines(para poder cambiar versiones)
+  * Generar un plugin de jenkins para la creación de los jobs
