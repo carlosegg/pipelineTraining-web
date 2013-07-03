@@ -13,7 +13,7 @@ Instrucciones:
 
 ```
  git clone --bare git@pdihub.hi.inet:enric/pipelineTraining-web.git
-````
+```
 
  una vez tenemos esto, en la interfaz web de pdihub creáis un nuevo repo con el nombre que queráis, y luego ejecutáis:
 
