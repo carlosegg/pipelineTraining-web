@@ -20,7 +20,7 @@ Por tanto se recomiendan máquinas físicas con al menos 4Gb de RAM.
 
 El esquema de red sería el siguiente:
 
-![Esquema de red](./img/training/DisenoDeRed.png "Esquema de red")
+![Esquema de red](/src/site/resources/img/training/DisenoDeRed.png "Esquema de red")
 
 Donde podemos ver que todas las máquinas virtuales están en la misma red (192.168.33.0/24).
 
